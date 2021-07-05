@@ -1,11 +1,11 @@
 SHELL := /bin/bash
 
 create_image:
-	docker build -t boilerplate .
+	docker build -t dynamodbegress .
 .phony: create_image
 
 run_image:
-	docker run -p 8000:5000 --rm boilerplate:latest
+	docker run -p 8000:5000 --rm dynamodbegress:latest
 .phony: run_image
 
 lint:

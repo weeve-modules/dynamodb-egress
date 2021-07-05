@@ -8,7 +8,7 @@
 | authors      | Jakub Grzelak                                                  |
 
 
-- [DynamoDB](#dynamodb)
+- [DynamoDB Egress](#dynamodb-egress)
   - [Description](#description)
   - [Features](#features)
   - [Environment Variables](#environment-variables)
@@ -38,15 +38,12 @@ Table in a database should have the following structure:
 
 The following module configurations can be provided in a data service designer section on weeve platform:
 
-| Name                    | Environment Variables   | type   | Description                                               |
-| ----------------------- | ----------------------- | ------ | --------------------------------------------------------- |
-| Input Label             | INPUT_LABEL             | string | The input label on which anomaly is detected              |
-| Output Label            | OUTPUT_LABEL            | string | The output label as which data is dispatched              |
-| Output Unit             | OUTPUT_UNIT             | string | The output unit in which data is dispatched               |
-| AWS Access Key ID       | AWS_ACCESS_KEY_ID       | string | Your AWS Access Key ID                                    |
-| AWS Secret Access Key   | AWS_SECRET_ACCESS_KEY   | string | Your AWS Secret Access Key                                |
-| Region                  | REGION                  | string | AWS DynamoDB region, i.e: 'us-east-2'                     |
-| Table                   | TABLE                   | string | Table name to where you want to write data                |
+| Name                  | Environment Variables | type   | Description                                |
+| --------------------- | --------------------- | ------ | ------------------------------------------ |
+| AWS Access Key ID     | AWS_ACCESS_KEY_ID     | string | Your AWS Access Key ID                     |
+| AWS Secret Access Key | AWS_SECRET_ACCESS_KEY | string | Your AWS Secret Access Key                 |
+| Region                | REGION                | string | AWS DynamoDB region, i.e: 'us-east-2'      |
+| Table                 | TABLE                 | string | Table name to where you want to write data |
 
 Other features required for establishing the inter-container communication between modules in a data service are set by weeve agent.
 
