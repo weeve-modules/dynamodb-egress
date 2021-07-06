@@ -21,10 +21,9 @@
 
 ## Description
 
-his module is responsible for saving data into the AWS DynamodDB.
-Table in a database should have the following structure:
-| timestamp    | INPUT_LABEL  | INPUT_UNIT   |
-| type: number | type: number | type: string |
+This module is responsible for saving data into the AWS DynamodDB.
+For each item being written to a database, this module generates uuid4 ID and a timestamp of receiving that data.
+Since AWS DynamodDB does not accept float type data, all floats will be converted to Decimals objects.
 
 ## Features
 
@@ -59,9 +58,9 @@ Other features required for establishing the inter-container communication betwe
 
 ```txt
 Flask==1.1.1
-requests
 python-dotenv
 boto3
+uuid
 ```
 
 ## Output
