@@ -17,6 +17,7 @@
   - [Examples](#examples)
     - [Input](#input)
     - [Output](#output)
+  - [docker-compose example](#docker-compose-example)
 
 ## Description
 
@@ -84,3 +85,22 @@ uuid
 ### Output
 
 There is no output for this module, except data written to a database.
+
+
+## docker-compose example
+
+```yml
+version: "3"
+services:
+  dynamodb-egress:
+    image: weevenetwork/dynamodb-egress
+    environment:
+      MODULE_NAME: dynamodb-egress
+      EGRESS_API_HOST: https://hookb.in/r1YwjDyn7BHzWWJVK8Gq
+      AWS_ACCESS_KEY_ID: asdasdasdasda
+      AWS_SECRET_ACCESS_KEY: asdasdasdasd
+      REGION: us-east-2
+      TABLE: TestingModule
+    ports:
+      - 5000:80
+```
