@@ -15,7 +15,9 @@
     - [Module Specific](#module-specific)
     - [Set by the weeve Agent on the edge-node](#set-by-the-weeve-agent-on-the-edge-node)
   - [Dependencies](#dependencies)
-  - [Output](#output)
+  - [Examples](#examples)
+    - [Input](#input)
+    - [Output](#output)
 
 
 
@@ -63,6 +65,25 @@ boto3
 uuid
 ```
 
-## Output
+## Examples
+
+### Input
+
+```json
+// Single item
+{
+  "temperature": 10
+}
+// Batch of data
+[
+  {
+  "temperature": 10.01
+  },
+  {
+  "temperature": 12.23
+  }
+]
+```
+### Output
 
 There is no output for this module, except data written to a database.

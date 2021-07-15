@@ -1,8 +1,12 @@
 SHELL := /bin/bash
 
 create_image:
-	docker build -t dynamodbegress .
+	docker build -t weevenetwork/dynamodbegress .
 .phony: create_image
+
+push_latest:
+	docker image push weevenetwork/dynamodbegress
+.phony: push_latest
 
 run_image:
 	docker run -p 8000:5000 --rm dynamodbegress:latest
