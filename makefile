@@ -1,15 +1,15 @@
 SHELL := /bin/bash
 
 create_image:
-	docker build -t weevenetwork/dynamodbegress .
+	docker build -t weevenetwork/dynamodb-egress .
 .phony: create_image
 
 push_latest:
-	docker image push weevenetwork/dynamodbegress
+	docker image push weevenetwork/dynamodb-egress
 .phony: push_latest
 
 run_image:
-	docker run -p 8000:5000 --rm dynamodbegress:latest
+	docker run -p 8000:5000 --rm dynamodb-egress:latest
 .phony: run_image
 
 lint:

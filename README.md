@@ -1,12 +1,11 @@
 # DynamoDB Egress
 
-|              |                                                                |
-| ------------ | -------------------------------------------------------------- |
-| name         | DynamoDB Egress                                                |
-| version      | v0.0.1                                                         |
-| docker image | [weevenetwork/weeve-egress-dynamodb](https://linktodockerhub/) |
-| authors      | Jakub Grzelak                                                  |
-
+|              |                                                                                       |
+| ------------ | ------------------------------------------------------------------------------------- |
+| name         | DynamoDB Egress                                                                       |
+| version      | v0.0.1                                                                                |
+| docker image | [weevenetwork/dynamodb-egress](https://hub.docker.com/r/weevenetwork/dynamodb-egress) |
+| authors      | Jakub Grzelak                                                                         |
 
 - [DynamoDB Egress](#dynamodb-egress)
   - [Description](#description)
@@ -19,8 +18,6 @@
     - [Input](#input)
     - [Output](#output)
 
-
-
 ## Description
 
 This module is responsible for saving data into the AWS DynamodDB.
@@ -29,9 +26,9 @@ Since AWS DynamodDB does not accept float type data, all floats will be converte
 
 ## Features
 
-* Flask ReST client
-* Request - sends HTTP Request to the next module
-* boto3
+- Flask ReST client
+- Request - sends HTTP Request to the next module
+- boto3
 
 ## Environment Variables
 
@@ -54,7 +51,6 @@ Other features required for establishing the inter-container communication betwe
 | --------------------- | ------ | -------------------------------------- |
 | EGRESS_API_HOST       | string | HTTP ReST endpoint for the next module |
 | MODULE_NAME           | string | Name of the module                     |
-
 
 ## Dependencies
 
@@ -84,6 +80,7 @@ uuid
   }
 ]
 ```
+
 ### Output
 
 There is no output for this module, except data written to a database.
