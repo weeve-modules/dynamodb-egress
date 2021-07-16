@@ -6,9 +6,8 @@ services:
       dockerfile: Dockerfile
     environment:
       MODULE_NAME: dynamodb-egress
-      EGRESS_API_HOST: https://hookb.in/r1YwjDyn7BHzWWJVK8Gq
-      AWS_ACCESS_KEY_ID: asdasdasdasda
-      AWS_SECRET_ACCESS_KEY: asdasdasdasd
+      AWS_ACCESS_KEY_ID: AKIA3H2C2GG6ROAPURX5
+      AWS_SECRET_ACCESS_KEY: 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
       REGION: us-east-2
       TABLE: TestingModule
     ports:
