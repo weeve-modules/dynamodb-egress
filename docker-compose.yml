@@ -6,6 +6,7 @@ services:
       dockerfile: Dockerfile
     environment:
       MODULE_NAME: dynamodb-egress
+      MODULE_TYPE: PROCESS
       AWS_ACCESS_KEY_ID: AKIA3H2C2GG6ROAPURX5
       AWS_SECRET_ACCESS_KEY: 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
       REGION: us-east-2
