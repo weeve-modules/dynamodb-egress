@@ -56,7 +56,7 @@ Other features required for establishing the inter-container communication betwe
 ## Dependencies
 
 ```txt
-Flask==1.1.1
+Flask
 python-dotenv
 boto3
 uuid
