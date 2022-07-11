@@ -1,4 +1,0 @@
-Flask
-python-dotenv
-boto3
-uuid
