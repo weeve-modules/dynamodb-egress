@@ -1,50 +1,51 @@
-version: 0.0.1
-name: AWS DynamoDB Egress
-description: Responsible for saving data into the AWS DynamodDB.
-icon: https://icons-020-demo.s3.eu-central-1.amazonaws.com/mi_Dynamo_DP_Output.png
-type: output
-tags:
+displayName: 'AWS DynamoDB Egress'       # Display name for the module that will be displayed in the UI.
+moduleName: 'dynamodb-egress'        # Module name that will be used to reference the module, and uniquely identify the module and their versions.
+description: 'Responsible for saving data into the AWS DynamodDB.'       # Module description that will be displayed in the UI.
+versionName: 'v1.0.0'                    # Module version name that will be used to reference the module version, and uniquely identify the module version with a common name.
+isPublic: true                          # Boolean value that indicates if the module is Public or Private.
+categories:                             # Array of category that will be used to group the module in the UI.
+  - 'Egress'
+type: 'Output'      # Module type (Input, Processing, Output) that will be used to group the module in the UI.
+image:
+  name: 'weevenetwork/dynamodb-egress'     # Image name from the docker registry.
+  tag: 'latest'                               # Image tag from the docker registry.
+  homepage: 'https://hub.docker.com/r/weevenetwork/dynamodb-egress'      # Image homepage from the docker registry.
+repository: 'https://github.com/weeve-modules/dynamodb-egress'     # Repository URL to source code.
+envs:                                   # Array of environment variables that will be used to configure the module. Also used to show related fields on the UI.
+  - name: AWS Access Key ID                   # name of the field to be displayed on the UI.
+    key: AWS_ACCESS_KEY_ID                # key to set in the environment variables.
+    description: Your AWS Access Key ID.     # Description/helper text for the field.
+    value: 'aws-access-key-id'                         # Value to be set in the environment variables.
+    type: 'text'                    # Type of the field. Possible values are: ['text', 'select', 'boolean', 'date', 'time', 'dateTime-local', 'number', 'multiple', 'CSV', 'file']
+    options: []
+    dependencies: []
+  - name: AWS Secret Access Key
+    key: AWS_SECRET_ACCESS_KEY
+    description: Your AWS Secret Access Key.
+    value: 'aws-secret-access-key'
+    type: 'text'
+    options: []
+    dependencies: []
+  - name: Region
+    key: REGION
+    description: AWS region where DynamoDB is running.
+    value: 'us-east-2'
+    type: 'text'
+    options: []
+    dependencies: []
+  - name: Table
+    key: TABLE
+    description: Table name to where you want to write data.
+    value: 'testTable'
+    type: 'text'
+    options: []
+    dependencies: []
+ports: []
+mounts: []
+tags:                                   # Array of tags.
   - DynamoDB
   - output
   - DB
   - egress
   - API
-categories:
-  - id: category
-    name: Egress
-image:
-  name: weevenetwork/dynamodb-egress
-  tag: latest
-environments:
-  - key: AWS_ACCESS_KEY_ID
-    description: Your AWS Access Key ID
-    value: ''
-    default: aws-access-key-id
-    type: string
-    name: AWS Access Key ID
-  - key: AWS_SECRET_ACCESS_KEY
-    description: Your AWS Secret Access Key
-    value: ''
-    default: aws-secret-access-key
-    type: string
-    name: AWS Secret Access Key
-  - key: REGION
-    description: AWS region where DynamoDB is running.
-    value: ''
-    default: us-east-2
-    type: string
-    name: Region
-  - key: TABLE
-    description: Table name to where you want to write data
-    value: ''
-    default: testTable
-    type: string
-    name: Table
-document:
-  ports: []
-  volumes: []
-  restart_policy:
-    condition: on-failure
-    delay: 10s
-    max_attempts: 3
-    window: 120s
+icon: 'https://icons-020-demo.s3.eu-central-1.amazonaws.com/mi_Dynamo_DP_Output.png'    # Icon URL that will be displayed in the UI.
