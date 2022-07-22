@@ -1,6 +1,6 @@
 displayName: 'AWS DynamoDB Egress'       # Display name for the module that will be displayed in the UI.
 moduleName: 'dynamodb-egress'        # Module name that will be used to reference the module, and uniquely identify the module and their versions.
-description: 'Responsible for saving data into the AWS DynamodDB.'       # Module description that will be displayed in the UI.
+description: 'Responsible for saving data into the AWS DynamoDB.'       # Module description that will be displayed in the UI.
 versionName: 'v1.0.0'                    # Module version name that will be used to reference the module version, and uniquely identify the module version with a common name.
 isPublic: true                          # Boolean value that indicates if the module is Public or Private.
 categories:                             # Array of category that will be used to group the module in the UI.
